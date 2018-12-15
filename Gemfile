@@ -36,6 +36,9 @@ group :development, :test do
   gem "dotenv-rails"
   gem "pry-byebug"
   gem "pry-rails"
+  gem 'rspec-rails'
+  gem 'factory_bot'
+  gem 'capybara'
 end
 
 group :test do
@@ -47,3 +50,4 @@ group :test do
 end
 
 gem "suspenders", group: [:development, :test]
+gem 'devise'
