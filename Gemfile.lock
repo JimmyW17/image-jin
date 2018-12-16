@@ -93,6 +93,11 @@ GEM
     execjs (2.7.0)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
+    factory_bot_rails (4.11.1)
+      factory_bot (~> 4.11.1)
+      railties (>= 3.0.0)
+    faker (1.9.1)
+      i18n (>= 0.7)
     ffi (1.9.25)
     formulaic (0.4.0)
       activesupport
@@ -275,7 +280,8 @@ DEPENDENCIES
   capybara
   devise
   dotenv-rails
-  factory_bot
+  factory_bot_rails
+  faker
   formulaic
   honeybadger
   jquery-rails
