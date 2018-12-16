@@ -7,4 +7,3 @@ FactoryBot.define do
     email "#{n}_#{Faker::Internet.email}"
   end
 end
-  
