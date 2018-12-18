@@ -18,7 +18,7 @@ describe 'Registration pages', type: :request do
         fill_in 'Password', with: 'password1234'
         fill_in 'Password confirmation', with: 'password1234'
         fill_in 'Current password', with: 'password123'
-        click 'Update'
+        click_on 'Update'
         expect(page).to have_content 'Your account has been updated successfully.'
       end
     end
