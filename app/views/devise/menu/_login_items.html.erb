@@ -1,13 +1,12 @@
 <% if user_signed_in? %>
-  <%= image_tag current_user.avatar %>
-  <li>
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %> 
+  <li class="nav-item">
+    <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'nav-link') %> 
   </li>
-  <li>
-    <%= link_to('Edit', edit_user_registration_path, method: :get) %>       
+  <li class="nav-item">
+    <%= link_to('Edit', edit_user_registration_path, method: :get, class: 'nav-link') %>       
   </li>
 <% else %>
-  <li>
-    <%= link_to('Login', new_user_session_path)  %>  
+  <li class="nav-item">
+    <%= link_to('Login', new_user_session_path, class: 'nav-link')  %>  
   </li>
-<% end %>
+<% end %> 

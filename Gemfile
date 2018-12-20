@@ -55,3 +55,6 @@ end
 
 gem "suspenders", group: [:development, :test]
 gem 'devise'
+gem 'bootstrap'
+gem 'material_icons'
+gem 'font-awesome-rails'

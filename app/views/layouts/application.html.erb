@@ -10,8 +10,10 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'layouts/header' %>
+    <p class="flash-notice"><%= notice %></p>
+    <p class="flash-alert"><%= alert %></p>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
