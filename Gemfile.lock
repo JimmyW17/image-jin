@@ -95,6 +95,8 @@ GEM
     dotenv-rails (2.5.0)
       dotenv (= 2.5.0)
       railties (>= 3.2, < 6.0)
+    dropzonejs-rails (0.8.4)
+      rails (> 3.1)
     erubi (1.7.1)
     execjs (2.7.0)
     factory_bot (4.11.1)
@@ -321,6 +323,7 @@ DEPENDENCIES
   capybara
   devise
   dotenv-rails
+  dropzonejs-rails
   factory_bot_rails
   faker
   font-awesome-rails
