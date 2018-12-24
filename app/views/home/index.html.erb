@@ -2,12 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="offset-3 col-sm-6">
-        <h1 class="title">What Can You Do With An Image?</h1>
-        <h4>Every landing page needs a small description after the big bold title, that&apos;s why we added this text here. Add here all the information that can make you or your product create the first impression.</h4>
+        <h1 class="title text-center">What Can You Do With An Image?</h1>
         <br>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-danger btn-raised btn-lg">
-          <i class="fa fa-play"></i> Watch video
-        </a>
+        <%= form_tag('/uploads', method: :post) do %>
+          <div id='home-dropzone'></div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -159,3 +158,7 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(home_init())
+</script>
