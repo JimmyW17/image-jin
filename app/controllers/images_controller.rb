@@ -6,6 +6,14 @@ class ImagesController < ApplicationController
     @images = Image.all
   end
 
+  def upload
+    file = params[:file]
+    @image = Image.new(
+      attachment: file
+    )
+    @image.save
+  end
+
   # GET /images/1
   def show
   end
@@ -53,6 +61,6 @@ class ImagesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def image_params
-      params.fetch(:image, {})
+      params.require(:image).permit(:attachment, :label, :url)
     end
 end

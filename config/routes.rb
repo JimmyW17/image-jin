@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :images
+  resources :images do
+    collection do
+      post :upload
+    end
+  end
   devise_for :users, controllers: { 
     sessions: 'users/sessions',
     registrations: 'users/registrations'
