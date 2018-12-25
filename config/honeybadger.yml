@@ -1,2 +1,2 @@
 ---
-api_key: <%= ENV['HONEY_BADGER_API'] %>
+api_key: <%= ENV['HONEYBADGER_AUTHENTICATION'] %>
