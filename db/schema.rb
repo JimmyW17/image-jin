@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_24_161205) do
+ActiveRecord::Schema.define(version: 2018_12_28_215029) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(version: 2018_12_24_161205) do
     t.index ["user_id"], name: "index_albums_on_user_id"
   end
 
+  create_table "image_tags", force: :cascade do |t|
+    t.integer "image_id"
+    t.integer "tag_id"
+    t.string "description"
+    t.decimal "score"
+  end
+
   create_table "images", force: :cascade do |t|
     t.string "label"
     t.text "url"
@@ -53,6 +60,13 @@ ActiveRecord::Schema.define(version: 2018_12_24_161205) do
     t.datetime "updated_at", null: false
     t.index ["album_id"], name: "index_images_on_album_id"
     t.index ["user_id"], name: "index_images_on_user_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "description"
+    t.integer "images_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
