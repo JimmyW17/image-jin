@@ -1,7 +1,7 @@
 class Image < ApplicationRecord
   has_one_attached :attachment
   has_many :image_tags
-  has_many :tags, through: :image_tags, counter_cache: :images_count
+  has_many :tags, through: :image_tags
 
   validate :attachment_or_url_present
 
