@@ -15,8 +15,8 @@
 //= require react
 //= require react_ujs
 //= require components
-//= require_tree .
-//= require jquery
 //= require dropzone
 //= require react
 //= require react_ujs
+//= require jquery
+//= require_tree .

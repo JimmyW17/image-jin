@@ -1,24 +1,26 @@
-<div class="container">
+<%# <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center">
       Header Placeholder
     </div>
   </div>
   <div class="row">
-    <div class="offset-3 col-sm-6">
-      <%= form_tag upload_images_path, method: :post, class: 'dropzone dz-clickable', id: 'home-dropzone' do %>
-        <div class="dz-message">Drop image here or click to upload.</div>
-        <div class="fallback">
-          <%= file_field_tag "upload_file", multiple: true%>
-        </div> 
-      <% end %>
-    </div>
+    <div class="offset-3 col-sm-6"> %>
+      <%#= form_tag upload_images_path, method: :post, class: 'dropzone dz-clickable', id: 'home-dropzone' do %>
+        <%# <div class="dz-message">Drop image here or click to upload.</div>
+        <div class="fallback"> %>
+          <%#= file_field_tag "upload_file", multiple: true%>
+        <%# </div> %>
+      <%# end %>
+    <%# </div>
   </div>
   <div class="row">
     <div class="offset-3 col-sm-6 dropzone-previews" id='dropzone-preview'></div>
   </div>
-</div>
+</div> %>
+
+<%= react_component 'App', {dropzone: true, form_url: upload_images_path, form_method: 'POST', authenticity_token: form_authenticity_token} %>
 
 <script>
-  initHome()
+  // initHome()
 </script>
