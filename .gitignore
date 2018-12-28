@@ -6,6 +6,7 @@
 /.bundle
 /.env.local
 /config/secrets.yml
+/config/gcp.json
 /coverage/*
 /db/*.sqlite3
 /db/*.sqlite3-journal
