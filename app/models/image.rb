@@ -6,6 +6,7 @@ class Image < ApplicationRecord
   validate :attachment_or_url_present
 
   after_create :generate_tags
+  before_destroy :delete_attachment
 
   # TODO: Move analyze_and_return_labels_with_score into a worker
   def analyze_and_return_labels_with_score
@@ -38,5 +39,9 @@ class Image < ApplicationRecord
 
   def attachment_or_url_present
     errors.add :base, "Missing attachment or url" if self.attachment.nil? && self.url.nil?
+  end
+
+  def delete_attachment
+    File.delete(image_on_disk)
   end
 end

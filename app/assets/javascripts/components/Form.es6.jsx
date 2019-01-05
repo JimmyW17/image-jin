@@ -11,6 +11,10 @@ class Form extends React.Component {
     }
   }
 
+  componentDidMount() {
+    if (this.state.dropzone) initDropzone()
+  }
+
   render() {
     const {url, type, data, dropzone, authenticityToken} = this.state
     return (
